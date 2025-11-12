@@ -1,44 +1,46 @@
-# QA
+QA
 
-Ця папка містить мої роботи у сфері тестування ПЗ.  
-Вона демонструє мої навички мануального та юніт-тестування.
+This folder contains my works in software testing.
+It demonstrates my skills in both manual testing and unit testing.
 
----
+01_Defect_Reporting_BookUA
 
-## 01_Defect_Reporting_BookUA
+This project demonstrates manual testing of the Book.ua web application.
+Both functional and visual defects were documented during testing.
 
-Цей проєкт демонструє мануальне тестування вебзастосунку Book.ua.  
-Документувалися функціональні та візуальні дефекти під час тестування.
+Severity Levels
 
-### Рівні критичності дефектів (Severity)
-- **Critical:** Функціональна помилка, що блокує роботу додатка (не виявлено)  
-- **Major:** Порушує роботу програми, але не блокує повністю  
-- **Average:** Менш важливі дефекти, впливають на зручність користування  
-- **Minor:** Незначні візуальні помилки  
-- **Enhancement:** Пропозиції щодо покращення
+Critical: Functional issue that blocks application usage (not found)
 
-### Приклади дефектів
+Major: Affects application functionality but does not completely block it
 
-| Headline | Severity | Опис | Фактичний результат | Очікуваний результат | Примітка |
-|----------|---------|------|-------------------|-------------------|----------|
-| Частковий переклад інтерфейсу | Major | Вибрати англійську мову | Частина елементів лишається українською | Весь інтерфейс має перекладатись англійською | (Див. Defect_Translation.png) |
-| Відсутня біографія автора | Average | Відкрити профіль автора | Відображається тільки ім'я | Має бути коротка біографія | (Див. Defect_Author_Bio.png) |
-| Відсутня кнопка "Головна" | Minor | Повернення на головну | Кнопка відсутня | Має бути кнопка для повернення | (Див. Defect_Author_Bio.png) |
-| Відсутні відгуки користувачів | Average | Перейти до розділу "Відгуки" | Відгуки відсутні | Очікується відображення відгуків інших користувачів | (Див. Defect_No_Reviews.png) |
+Average: Less important defects, affecting user convenience
 
----
+Minor: Minor visual issues
 
-## 02_Unit_Testing_VideoAnalyzer
+Enhancement: Suggestions for improvement
 
-Цей проєкт демонструє юніт-тестування на C# за допомогою MSTest.  
-Тестувався клас `VideoAnalyzer`, який аналізує кадри відео та виявляє рух.
+Example Defects
+Headline	Severity	Description	Actual Result	Expected Result	Note
+Partial interface translation	Major	Select English language	Some elements remain in Ukrainian	Entire interface should be translated into English	(See Defect_Translation.png)
+Missing author biography	Average	Open author profile	Only the name is displayed	A short biography should be displayed	(See Defect_Author_Bio.png)
+Missing "Home" button	Minor	Navigate back to home	Button is missing	There should be a button to return	(See Defect_Author_Bio.png)
+Missing user reviews	Average	Go to "Reviews" section	Reviews are missing	Reviews from other users should be displayed	(See Defect_No_Reviews.png)
+02_Unit_Testing_VideoAnalyzer
 
-### Тестовані методи
-- `DetectMotion(byte[] frame1, byte[] frame2)`  
-  - Повертає `true`, якщо кадри різні  
-  - Повертає `false`, якщо кадри однакові
-- `IsFrameEmpty(byte[] frame)`  
-  - Повертає `true`, якщо всі байти нульові  
-  - Повертає `false`, якщо хоча б один байт ненульовий
+This project demonstrates unit testing in C# using MSTest.
+The VideoAnalyzer class was tested, which analyzes video frames and detects motion.
 
+Tested Methods
 
+DetectMotion(byte[] frame1, byte[] frame2)
+
+Returns true if frames are different
+
+Returns false if frames are identical
+
+IsFrameEmpty(byte[] frame)
+
+Returns true if all bytes are zero
+
+Returns false if at least one byte is non-zero
